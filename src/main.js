@@ -15,16 +15,18 @@ async function checkWeather(city) {
 
     if(response.status == 404){
         document.querySelector(".error").style.display ="block";
-        document.querySelector(".weather").style.display ="none";
     } else if (response.status == 400){
         document.querySelector(".error").style.display ="block";
     } else {
         var data = await response.json();
-    
+        
+        console.log(data);
+
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°F";
         document.querySelector(".humidity").innerHTML = Math.round(data.main.humidity) + "%";
         document.querySelector(".wind").innerHTML = Math.round(data.wind.speed,1) + " mi/h";
+        document.querySelector(".feels-like").innerHTML = "Feels like " + Math.round(data.main.feels_like) + "°F";
 
         if(data.weather[0].main == "Clouds"){
             weatherIcon.src = "src/clouds.png";

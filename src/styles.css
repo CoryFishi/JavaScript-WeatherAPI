@@ -90,4 +90,9 @@ body {
     font-size: 14px;
     margin-top: 10px;
     display: none;
+    color: red;
+    text-shadow: 1px 1px 1px rgb(161, 161, 161);
+}
+.feels-like {
+    font-size: 12px;
 }
