@@ -13,4 +13,4 @@ The Weather App was created as a start to long list of projects that I am workin
 
 ## Authors
 
-* **Cory Fishburn** - [CoryFishi](https://github.com/CoryFishi))
+* **Cory Fishburn** - [CoryFishi](https://github.com/CoryFishi)
