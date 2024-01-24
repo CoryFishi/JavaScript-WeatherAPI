@@ -1,26 +1,19 @@
+// API Consts
 const apiKey = "ada2ef96978611168645317c2453121b";
 const apiURL =  "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
-
+// Doc Consts
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
 const weatherIcon = document.querySelector('.weather-icon');
 
+// API Call
 async function checkWeather(city) {
     const response = await fetch(apiURL + city + `&appid=${apiKey}`);
+    // Check if there was an error with the API call
     if (response.status == 200) {
-        console.log("Successful: " + response.status);
-    } else {
-        console.log("Error: " + response.status);
-    }
-
-    if(response.status == 404){
-        document.querySelector(".error").style.display ="block";
-    } else if (response.status == 400){
-        document.querySelector(".error").style.display ="block";
-    } else {
         var data = await response.json();
         
-        console.log(data);
+        console.log("Successful: " + response.status);
 
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°F";
@@ -42,9 +35,12 @@ async function checkWeather(city) {
 
         document.querySelector(".error").style.display ="none";
         document.querySelector(".weather").style.display ="block";
+    } else {
+        document.querySelector(".error").style.display ="block";
+        console.log("Error: " + response.status);
     }
 }
-
+// Listeners for document
 searchBtn.addEventListener("click", ()=> {
     checkWeather(searchBox.value);
 });

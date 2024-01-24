@@ -1,3 +1,4 @@
+/* General CSS */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 body {
     background-color: #222;
 }
-
+/* Class CSS */
 .card {
     width: 90%;
     max-width: 470px;
@@ -91,7 +92,7 @@ body {
     margin-top: 10px;
     display: none;
     color: red;
-    text-shadow: 1px 1px 1px rgb(161, 161, 161);
+    text-shadow: 1px 1px 1px rgb(110, 110, 110);
 }
 .feels-like {
     font-size: 12px;
