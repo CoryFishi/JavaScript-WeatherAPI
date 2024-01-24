@@ -2,9 +2,7 @@
 
 The weather app provides a quick and simple view of any city's current weather conditions. It uses the Open Weather API to get current data on the specified city.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The Weather App was created as a start to long list of projects that I am working on to better my understanding of JavaScript and related languages.
 
 ## Built With The Basics
 
